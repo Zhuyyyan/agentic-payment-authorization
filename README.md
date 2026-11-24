@@ -2,6 +2,8 @@
 
 **Transaction-Level Authorization for Consumer-Delegated Agentic Payments**
 
+公开仓库：[Zhuyyyan/agentic-payment-authorization](https://github.com/Zhuyyyan/agentic-payment-authorization)。
+
 金融科技导论研究计划及可复现Python仿真：当AI Agent代表消费者购物付款或转账时，如何逐笔检查其权限，并在安全性与人工确认成本之间取得平衡？
 
 > 全部交易均为人工合成。项目不接入真实账户、不转移真实资金、不使用真实用户交易，也不训练大型语言模型。实验结论仅适用于所设模拟分布。
@@ -16,6 +18,22 @@
 |[质量审查](quality_review.md)|验证证据、已修复问题及仍存在的文献获取限制|
 |[运行验证记录](outputs/logs/verification.json) · [文档渲染记录](outputs/logs/native_render_audit.json)|源文件与论文摘要、复核规模、分页及字号等可检查证据|
 |[文献矩阵](literature/literature_matrix.csv)|17项资料的类型、方法、局限和使用位置|
+|[论文与仓库一致性核对](research/repository_consistency_review.md)|代码、结果表及论文文件的对应检查|
+
+## 项目状态与验证
+
+截至2026年11月24日，研究计划、Python仿真、探索性结果和理解辅助稿已整理并公开。论文属于 **Research Proposal（研究计划）**：已运行的合成仿真与未来拟开展的研究分别说明，假设的适用范围以论文分析为准。
+
+|核对项目|记录与范围|
+|---|---|
+|论文排版|LibreOffice原生渲染，论文17页、辅助稿8页；论文文字字号12 pt（小四），PDF与DOCX同源，见[渲染记录](outputs/logs/native_render_audit.json)|
+|程序验证|15项单元测试；[运行记录](outputs/logs/verification.json)另保存环境、源文件SHA256及150万条决策记录的复核规模，该数量包含同批交易在不同策略下的决策，不是150万笔独立交易|
+|结果一致性|主实验、追加实验的结果表与论文展示值已核对；发布收尾仅修改说明和证据入口，实验参数、结果及论文数值保持不变|
+|资料限制|部分文献全文仍有访问限制，详见[文献阅读说明](literature/literature_review_notes.md)和[质量审查](quality_review.md)；不据此宣称全部文献已完成全文核验|
+
+这些记录对应已归档版本。修改代码、参数或文稿后，应重新运行相关验证，并同步结果表、图表、论文与README。公开范围和发布操作见[发布说明](PUBLICATION.md)。
+
+首次阅读可先看[理解辅助稿](paper/理解辅助稿.md)中的交易手算与指标解释，再对照[实验设计](research/experimental_design.md)、下方结果表和源码；辅助稿也提供[可编辑DOCX](paper/理解辅助稿.docx)。
 
 ## 研究设计
 
@@ -60,11 +78,26 @@
 
 这是主实验之后的探索性复核。共同阈值OR仍是受限基准，且测试安全水平不完全相等，不能推出M3优于所有固定规则。Bootstrap区间以模拟种子为单位，只衡量Monte Carlo波动。详见[逐种子结果](outputs/tables/per_seed.csv)、[配对差值](outputs/tables/paired_contrasts.csv)和[追加比较](outputs/tables/robust_contrasts.csv)。
 
+### 实验与证据对应
+
+|实验|主要输出|阅读重点|
+|---|---|---|
+|一：三种机制比较|[指标汇总](outputs/tables/summary.csv)、[逐种子结果](outputs/tables/per_seed.csv)|同时比较安全、合法执行、拒绝、人工升级、损失代理及审计完整性|
+|二：阈值权衡|[阈值扫描](outputs/tables/thresholds.csv)、[校准记录](outputs/tables/calibration.csv)、[配对差值](outputs/tables/h2_contrasts.csv)|阈值由独立校准样本选择；测试安全水平是否接近仍需检查|
+|三：风险信号组合|[分组结果](outputs/tables/groups.csv)、[组合效应差值](outputs/tables/h3_contrast.csv)|单信号与多信号组的相对控制效果；分组比较本身不构成真实因果推断|
+|四：模块消融|[完整策略及消融汇总](outputs/tables/summary.csv)、[配对比较](outputs/tables/paired_contrasts.csv)、[篡改子集](outputs/tables/tamper_subset.csv)|分别检查移除风险评分或完整性验证后的变化|
+|五：权重敏感性|[权重方案结果](outputs/tables/weights.csv)|比较人工设定方案，不将某一方案称为最优权重|
+|追加复核|[公平基准测试](outputs/tables/robust_test.csv)、[配对比较](outputs/tables/robust_contrasts.csv)、[生成过程敏感性](outputs/tables/dgp_sensitivity.csv)|检查共用风险信号的固定规则基准，以及噪声和风险占比改变后的结果|
+
+主实验的种子、样本量及数据摘要见[实验清单](experiment_manifest.csv)，追加实验见[追加清单](outputs/tables/robust_manifest.csv)。确定性边界与因子场景用于验证规则行为，不作为重复独立样本纳入置信区间。
+
 ## 安装与复现
 
 Python 3.12.14已验证；实验依赖主要为NumPy和pandas。完整依赖及精确版本分别见[requirements.txt](requirements.txt)和[requirements-lock.txt](requirements-lock.txt)。
 
 ```bash
+git clone https://github.com/Zhuyyyan/agentic-payment-authorization.git
+cd agentic-payment-authorization
 python -m venv .venv
 # Windows: .venv/Scripts/Activate.ps1
 # macOS/Linux: source .venv/bin/activate
