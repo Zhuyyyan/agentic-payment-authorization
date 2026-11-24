@@ -14,6 +14,7 @@
 |[可编辑论文](paper/paper.docx)|与最终PDF对应的DOCX|
 |[理解辅助稿 PDF](paper/理解辅助稿.pdf)|8页中文讲解：220元交易手算、变量、指标、复跑与问答|
 |[质量审查](quality_review.md)|验证证据、已修复问题及仍存在的文献获取限制|
+|[运行验证记录](outputs/logs/verification.json) · [文档渲染记录](outputs/logs/native_render_audit.json)|源文件与论文摘要、复核规模、分页及字号等可检查证据|
 |[文献矩阵](literature/literature_matrix.csv)|17项资料的类型、方法、局限和使用位置|
 
 ## 研究设计

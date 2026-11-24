@@ -1,0 +1,29 @@
+{
+  "environment": {
+    "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+    "platform": "Windows-11-10.0.26300-SP0",
+    "numpy": "2.3.5",
+    "pandas": "3.0.1",
+    "checked_decision_records": 1500000,
+    "pdf_pages": 17,
+    "pdf_text_font_sizes": [
+      12.0
+    ]
+  },
+  "source_hashes": {
+    "src\\main.py": "8348279d38aaaf552d7d4ca8d00b1a8372259392847499a639761603c2246a99",
+    "src\\__init__.py": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+    "src\\authorization\\audit.py": "ccd2d984fb0b590180f6c0e59d94fce403b033cfc9cf798ce3260f587e8c7b66",
+    "src\\authorization\\mandate.py": "57b61a7c8076912c0bfb4203484b5588d01fe19c7df6b7153b2360192b308f70",
+    "src\\authorization\\policies.py": "23d576074487b1a78d208837d7d60550e3517b43c306529e71f646fb62d52439",
+    "src\\authorization\\risk.py": "53f619f9858d031da64e906fe1896fbc6fc78cb27c50af67bd33fe4080432973",
+    "src\\authorization\\runtime.py": "96278d60699cffa0d558ee822bfa10185be408f80088cd0fd8ff1719d8451aea",
+    "src\\authorization\\__init__.py": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+    "src\\simulation\\experiments.py": "c997c05e098f44fcd44b3d056ab475772b850bc52ca090dad26c8391bc886da2",
+    "src\\simulation\\generator.py": "94274d2962929c624434e009433973bff43ad3a1b95864c640cc0c448dab0d52",
+    "src\\simulation\\metrics.py": "2b80f11d9c0059d3611511e9583f73219fa4e8e77593c73c7ba18db16cc720e2",
+    "src\\simulation\\robustness.py": "7c584a8c638f60668137766cb40793a35115b06bb6094afa694d9cb1a8722355",
+    "src\\simulation\\sensitivity.py": "34e131850001cf2d666605cae49d14a6c3d4a4269312cfd853e32096e03e35c7",
+    "src\\simulation\\__init__.py": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+  }
+}

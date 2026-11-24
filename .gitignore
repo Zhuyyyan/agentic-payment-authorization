@@ -4,7 +4,7 @@ __pycache__/
 tmp/
 literature/sources/
 data/generated/
-outputs/logs/
+outputs/logs/*
 !outputs/logs/verification.json
 !outputs/logs/native_render_audit.json
 deliverables/

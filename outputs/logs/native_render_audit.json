@@ -1,0 +1,15 @@
+{
+  "native_renderer": "LibreOffice 26.8.3.1 via documents/render_docx.py",
+  "paper_pages": 17,
+  "guide_pages": 8,
+  "paper_font_sizes": [
+    12.0
+  ],
+  "same_source_docx_and_pdf": true,
+  "files": {
+    "paper.docx": "90d7d079b8cb96067660c62f6c7ce918c17c2a4609dd0c727cbcb01ae087980f",
+    "paper.pdf": "0dc40a0c9aa4fd19a8163453ba8432342ff511a533b4fa9d61526da08d3e47c1",
+    "理解辅助稿.docx": "89f5b6b80b88c8fef0ae708b177694b01eb32c21bbea2e607f60e94907703403",
+    "理解辅助稿.pdf": "c04e6738ddad99b8b448b249dbbb21a7f42bba33af19f6b1fab4921aa042b4fa"
+  }
+}
