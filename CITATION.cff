@@ -1,0 +1,13 @@
+cff-version: 1.2.0
+message: "Please cite the research proposal and repository when discussing this simulation."
+title: "Transaction-Level Authorization for Consumer-Delegated Agentic Payments"
+type: software
+authors:
+  - name: "Zhuyyyan"
+repository-code: "https://github.com/Zhuyyyan/agentic-payment-authorization"
+abstract: "An exploratory, fully synthetic Python simulation of mandate-only, fixed-rule, and risk-sensitive transaction authorization."
+keywords:
+  - fintech
+  - agentic-payments
+  - authorization
+  - synthetic-data

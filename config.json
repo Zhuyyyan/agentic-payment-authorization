@@ -1,0 +1,1 @@
+{"weights":[0.2,0.2,0.25,0.2,0.15],"thresholds":[0.25,0.45,0.7],"fixed":[0.8,1,0.6],"seeds":30,"n":10000,"bootstrap":2000,"loss":{"unauthorized_amount":1.0,"legitimate_denial":10.0,"escalation":1.0}}
