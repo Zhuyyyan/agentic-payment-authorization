@@ -1,5 +1,5 @@
 cff-version: 1.2.0
-message: "Please cite the research proposal and repository when discussing this simulation."
+message: "Please cite this repository when using the simulation or its results."
 title: "Transaction-Level Authorization for Consumer-Delegated Agentic Payments"
 type: software
 authors:

@@ -19,3 +19,16 @@ literature/fulltext_retry_log.json
 tools/publish_github.py
 tools/publication_audit.py
 tools/prepare_publication.py
+
+# Course deliverables and local publishing tools stay on this computer.
+paper/
+literature/
+research/
+tools/
+publish.ps1
+PUBLICATION.md
+claims_audit.md
+progress.md
+quality_review.md
+outputs/logs/native_render_audit.json
+~$*
